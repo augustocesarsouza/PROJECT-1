@@ -2,12 +2,8 @@ import "./styles.css";
 
 export const Button = ({ text, onClick, disabled }) => {
   return (
-    <button disabled={disabled} className="button" onClick={onClick}>
+    <button className="button" disabled={disabled} onClick={onClick}>
       {text}
     </button>
   );
 };
-
-// export const Button = ({ loadMorePosts }) => {
-//   return <button onClick={loadMorePosts}>Load more posts</button>;
-// };

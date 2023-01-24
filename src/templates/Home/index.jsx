@@ -12,7 +12,7 @@ export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [page, setPage] = useState(0);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(2);
   const [searchValue, setSearchValue] = useState("");
 
   const noMorePosts = page + postsPerPage >= allPosts.length;
@@ -61,7 +61,7 @@ export const Home = () => {
       {filteredPost.length === 0 && <p>Não existem posts</p>}
 
       <div className="button-container">
-        {!searchValue && <Button text="Load more posts" onClick={loadMorePosts} disabled={noMorePosts} />}
+        {!searchValue && <Button text="Load more" onClick={loadMorePosts} disabled={noMorePosts} />}
       </div>
     </section>
   );
